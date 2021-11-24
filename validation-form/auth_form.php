@@ -31,7 +31,7 @@ echo 'Host information: '.$mysqli->host_info;
 echo '<br>';
 echo 'Protocol version: '.$mysqli->protocol_version;
 
-$result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
+$result = $mysqli->query("SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
 
 $user = $result->fetch_assoc();
 
@@ -40,10 +40,10 @@ if(count($user) == 0){
     exit();
 }
 
-
+setcookie('user', $user['name'], time() + 3600, "/");
 
 $mysqli->close();
 
-header('Location: /reg_form.html');
-}
+header('Location: ../auth_form.html');
+
 ?>
