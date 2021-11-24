@@ -57,30 +57,26 @@
         </div>
     </div>
 </nav>
-<!--Registration -->
+<!--Authorization-->
 <div class="container reg-form">
-    <h1>Форма регистрации</h1>
     <br>
     <br>
-    <form class="reg-form" action="validation-form/reg_form.php" method="post">
-        <div class="mb-3 col-12 col-md-4">
-            <h3>Username</h3>
-            <input type="text" class="form-control" name="username" id="username" placeholder="Введите юзернейм">
-        </div>
+    <br>
+    <br>
+    <br>
+    <h1>Пожалуйста, войдите</h1>
+    <br>
+    <br>
+    <form class="justify-content-center" action="validation-form/auth_form.php" method="post">
         <div class="mb-3 col-12 col-md-4">
             <h3>Login</h3>
-            <input type="text" class="form-control" name="login" id="login" placeholder="Введите логин">
-        </div>
-        <div class="mb-3 col-12 col-md-4">
-            <h3>Email address</h3>
-            <input type="email" class="form-control" name="email" id="email" placeholder="Введите email">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else!</div>
-        </div>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Введите юзернейм">
+        </div>        
         <div class="mb-3 col-12 col-md-4">
             <h3>Password</h3>
             <input type="password" class="form-control" name="password" id="password" placeholder="Введите пароль">
         </div>
-        <button class="btn btn-success" type="submit">Зарегистрироваться</button>
+        <button class="btn btn-success" type="submit">Авторизоваться</button>
         <br>
         <br>
     </form>
