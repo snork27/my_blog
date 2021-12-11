@@ -1,4 +1,6 @@
 <?php
+
+
 $login = filter_var(trim($_POST['login']), FILTER_SANITIZE_STRING);
 $password = filter_var(trim($_POST['password']), FILTER_SANITIZE_STRING);
 
@@ -44,6 +46,6 @@ setcookie('user', $user['name'], time() + 3600, "/");
 
 $mysqli->close();
 
-header('Location: ../auth_form.html');
+header('Location: /index1.php');
 
 ?>

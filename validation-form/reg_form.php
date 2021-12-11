@@ -51,6 +51,6 @@ $mysqli->query("INSERT INTO `users` (`username`, `login`, `email`, `password`) V
 
 $mysqli->close();
 
-header('Location: /reg_form.html');
+header('Location: /index1.php');
 
 ?>
