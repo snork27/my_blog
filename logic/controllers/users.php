@@ -1,7 +1,8 @@
 <?php
 
-include("../logic/database/db.php");
+include(dirname(__FILE__)."/../database/db.php");
 
+$isSubmit = false;
 $errorMsg = [];
 
 function userAuth($user) {
@@ -11,7 +12,7 @@ function userAuth($user) {
     $_SESSION['username'] = $user['username'];
 
     if ($_SESSION['id']) {
-        header('Location: /index1.php');
+        header('Location: ../index1.php');
     }
 }
 //Reg form
@@ -22,22 +23,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])) {
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
     $password = filter_var(trim($_POST['password']), FILTER_SANITIZE_STRING);
 
-    if (mb_strlen($login) < 5 || mb_strlen($login) > 15) {
-        echo "Недопустимая длина логина";
-        exit ();
+    if ($email === '' || $login === '' || $username === '' || $password === '') {
+        array_push($errorMsg, "Все поля должны быть заполнены!");
+    else if (mb_strlen($login) < 2) {
+        array_push($errorMsg, "Логин должен быть больше 2 символов!");
     }
-    else if (mb_strlen($username) < 5 || mb_strlen($username) > 15) {
-        echo "Недопустимая длина юзернейма";
-        exit ();
+    else if (mb_strlen($username) < 5) {
+        array_push($errorMsg, "Юзернейм должен быть больше 5 символов!");
     }
-    else if (mb_strlen($password) < 5 || mb_strlen($password) > 15) {
-        echo "Недопустимая длина пароля";
-        exit ();
+    else if (mb_strlen($password) < 5) {
+        array_push($errorMsg, "Пароль должен быть больше 5 символов!");
     }
 
-    $password = md5($password."stdb1vds6531");
+    
 
     else {
+        $password = md5($password."stdb1vds6531");
+        
         $mysqli->query("INSERT INTO `users` (`username`, `login`, `email`, `password`) VALUES ('$username', '$login', '$email', '$password')");
 
         $mysqli->close();
@@ -51,16 +53,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])) {
     $password = filter_var(trim($_POST['password']), FILTER_SANITIZE_STRING);
 
     if ($login === '' || $password === '') {
-        array_push($errorMsg, "Все поля должны быть заполнены");
+        array_push($errorMsg, "Все поля должны быть заполнены!");
 
         else {
             $result = $mysqli->query("SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$password'");
             $user = $result->fetch_assoc();
             $mysqli->close();
-        } 
-        if ($existenceLogin && password_verify($password, $existenceLogin['password'])) {
-            userAuth($existenceLogin);
-        }
+        }           
+        
         else {
             array_push($errorMsg, "Не верный логин или пароль");
         }
