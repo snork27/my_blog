@@ -1,0 +1,121 @@
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    background-color: white;
+    min-width: 320px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+section{
+    padding: 50px 0;
+}
+a{
+    color: #111;
+}
+a:hover {
+    color: #555;
+}
+
+/*Header*/
+.navbar-brand{
+    padding-left: 70px;
+    
+}
+.navbar-nav{
+    padding-right: 70px;
+    text-transform: uppercase;
+}
+.navbar-light .navbar-nav .navbar-link{
+    color: #111;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.top-menu li a::after{
+content: '';
+display: block;
+width: 100%;
+background-color: #111;
+height: 1px;
+transition: all .3s;
+transform: scale(0);
+text-transform: uppercase;
+}
+.top-menu li a:hover::after{
+    transform: scale(1);
+}
+/*Header*/
+
+/*Carousel*/
+.my-carousel{
+padding: 0;
+padding-top: 57px;
+}
+.my-carousel .carousel-item{
+    display: flex;
+    max-height: 500px;
+}
+.my-carousel .carousel-item img{
+    object-fit: cover;
+}
+/*Carousel*/
+/*Footer*/
+.footer {
+    background: #1f1f1f;
+    color: white;
+    position: relative;
+    margin-top: auto;
+}
+.fa-telegram:before {
+    color: white;
+    font-size: 40px;
+}
+.fa-instagram:before {
+    color: white;
+    font-size: 40px;
+}
+.fa-github::before{
+    color: white;
+    font-size: 40px;
+}
+.logo-text{
+    color: white;
+}
+.contact{
+    color: white;
+}
+/*Footer*/
+.footer a{
+    text-decoration: none;
+    transition: all .3s;
+}
+.footer .socials {
+    text-align: center;
+}
+.footer .footer-section {
+    padding: 22px;
+}
+.footer .footer-section {
+    padding: 22px;
+}
+.footer .logo-text {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 22px;
+}
+.footer .contact {
+    text-align: center;
+    
+}
+/*Reg-form*/
+.reg-form{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 57px;
+}

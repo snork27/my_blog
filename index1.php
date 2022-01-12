@@ -1,3 +1,9 @@
+<?php
+//include ('./validation-form/auth_form.php');
+var_dump($user['login']);
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -14,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="front/css/styles.css">
     <title>Мой первый сайт</title>
 </head>
 

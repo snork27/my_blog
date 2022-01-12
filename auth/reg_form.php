@@ -20,7 +20,7 @@ include("../func/validation_reg.php")
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../front/css/styles.css">
     <title>Мой первый сайт</title>
 </head>
 
@@ -32,7 +32,7 @@ include("../func/validation_reg.php")
     <h1>Форма регистрации</h1>
     <br>
     <br>
-    <form class="reg-form" action="/validation-form/reg_form.php" method="post">
+    <form class="reg-form" action="../logic/controllers/users.php" method="post">
         <div class="mb-3 col-12 col-md-4">
             <h3>Username</h3>
             <input type="text" class="form-control <?php  ?>"  name="username" id="username" placeholder="Введите юзернейм">
