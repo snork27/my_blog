@@ -1,3 +1,5 @@
+<?php include("../logic/controllers/users.php");?>
+
 <!doctype html>
 <html lang="en">
 

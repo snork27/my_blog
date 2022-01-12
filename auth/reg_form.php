@@ -1,8 +1,4 @@
-<?php 
-include("../func/validation_reg.php")
-
-
-?>
+<?php include("../logic/controllers/users.php");?>
 
 <!doctype html>
 <html lang="en">
