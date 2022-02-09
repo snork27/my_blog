@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../../index1.php">Мой первый сайт</a>
+            <a class="navbar-brand" href="../../index.php">Мой первый сайт</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 top-menu">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../../index1.php">Домашняя</a>
+                        <a class="nav-link" aria-current="page" href="../../index.php">Домашняя</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button"

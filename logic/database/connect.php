@@ -1,9 +1,9 @@
 <?php
-$db_host = '127.0.0.1';
-$db_user = 'root';
-$db_password = 'root';
-$db_db = 'register-bd';
-$db_port = 8889;
+$db_host = 'db';
+$db_user = 'dev_user';
+$db_password = 'devpass';
+$db_db = 'dev_db';
+$db_port = 3306;
 
 $mysqli = new mysqli(
     $db_host,

@@ -3,7 +3,7 @@
             <div class="footer content-container">
                 <div class="row">
                     <div class="footer-section about col-md-4 col-12" >
-                        <a href="../../index1.php">
+                        <a href="../../index.php">
                             <h3 class="logo-text">Мой первый сайт</h3>
                         </a>
                     </div>
