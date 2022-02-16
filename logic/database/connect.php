@@ -1,4 +1,6 @@
 <?php
+
+
 $db_host = 'db';
 $db_user = 'dev_user';
 $db_password = 'devpass';
@@ -20,9 +22,8 @@ if ($mysqli->connect_error) {
     exit();
 }
 
-echo 'Success: A proper connection to MySQL was made.';
-echo '<br>';
-echo 'Host information: '.$mysqli->host_info;
-echo '<br>';
-echo 'Protocol version: '.$mysqli->protocol_version;
-?>
+//echo 'Success: A proper connection to MySQL was made.';
+//echo '<br>';
+//echo 'Host information: '.$mysqli->host_info;
+//echo '<br>';
+//echo 'Protocol version: '.$mysqli->protocol_version;

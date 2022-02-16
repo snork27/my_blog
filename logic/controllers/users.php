@@ -1,6 +1,7 @@
 <?php
-include("logic/database/connect.php");
-include("logic/database/db.php");
+
+require_once (__DIR__ . "/../database/connect.php");
+
 
 $isSubmit = false;
 $errorMsg = [];
